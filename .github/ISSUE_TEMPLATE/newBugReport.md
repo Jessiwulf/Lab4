@@ -1,4 +1,3 @@
----
 name: Bug Report
 about: Lab4
 title: "[Bug]: "
@@ -63,8 +62,5 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-
-
----
 
 
