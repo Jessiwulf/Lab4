@@ -1,53 +1,47 @@
-name: Feature Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Feature suggestion
+description: For Lab4.1.4 New Feature Template.
+title: "Feature: "
+labels: ["feature", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
 assignees:
   - octocat
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
     id: contact
     attributes:
       label: Contact Details
-      description: How can we get in touch with you if we need more info?
+      description: What is your name?
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
+  - type: markdown
+      attributes:
+        value: |
+          Thanks for taking the time to fill out this Feature suggestion!
   - type: dropdown
-    id: version
+    id: Version
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Type of request?
+      description: Select the type of your request.
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - New Feature
+        - Fix Feature
+        - Imporve Feature
       default: 0
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: os
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What is the OS which you want to suggest?
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Windows
+        - Linux
+        - DOS
+        - macOS
+        - iOS
+        - Android
   - type: textarea
     id: logs
     attributes:
