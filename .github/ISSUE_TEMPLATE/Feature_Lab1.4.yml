@@ -11,7 +11,7 @@ body:
     attributes:
       label: Contact Details
       description: What is your name?
-      placeholder: ex. email@example.com
+      placeholder: ex. Sertha Taweewattana
     validations:
       required: false
   - type: markdown
@@ -48,7 +48,7 @@ body:
       label: What are the details of your suggestion?
       description: Explain what you want.
       render: shell
-      placeholder: Feature details!
+      value: "Feature details!"
     validations:
       required: true
 
