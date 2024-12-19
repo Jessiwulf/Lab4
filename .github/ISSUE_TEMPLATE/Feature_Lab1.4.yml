@@ -15,11 +15,11 @@ body:
     validations:
       required: false
   - type: markdown
-      attributes:
-        value: |
-          Thanks for taking the time to fill out this Feature suggestion!
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Feature suggestion!
   - type: dropdown
-    id: Version
+    id: version
     attributes:
       label: Type of request?
       description: Select the type of your request.
@@ -27,7 +27,7 @@ body:
         - New Feature
         - Fix Feature
         - Improve Feature
-      default: 0
+      default: New Feature
     validations:
       required: true
   - type: dropdown
@@ -43,12 +43,13 @@ body:
         - iOS
         - Android
   - type: textarea
-    id: feature details
+    id: feature_details
     attributes:
       label: What are the details of your suggestion?
-      description: Explain what do you want.
+      description: Explain what you want.
       render: shell
       placeholder: Feature details!
+    validations:
       required: true
 
 
