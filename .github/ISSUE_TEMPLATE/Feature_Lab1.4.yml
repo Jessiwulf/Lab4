@@ -27,7 +27,7 @@ body:
         - New Feature
         - Fix Feature
         - Improve Feature
-      default: New Feature
+      default: 0
     validations:
       required: true
   - type: dropdown
