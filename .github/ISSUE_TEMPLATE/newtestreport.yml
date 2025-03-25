@@ -15,7 +15,7 @@ body:
     attributes:
       label: Order ID (if applicable)
       description: If this bug is related to a specific order, please provide the order ID.
-      placeholder: ex. #12345
+      placeholder: "ex. #12345"
     validations:
       required: false
   - type: input
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Your Email Address
       description: Please provide your email address to help us contact you about this issue.
-      placeholder: ex. email@example.com
+      placeholder: "ex. email@example.com"
     validations:
       required: true
   - type: input
@@ -31,7 +31,7 @@ body:
     attributes:
       label: Browser Version
       description: What browser and version are you using when you encounter this bug?
-      placeholder: ex. Chrome 90.0.4430.85
+      placeholder: "ex. Chrome 90.0.4430.85"
     validations:
       required: true
   - type: input
@@ -39,7 +39,7 @@ body:
     attributes:
       label: Operating System
       description: Which operating system are you using?
-      placeholder: ex. Windows 10, macOS Monterey, Linux Ubuntu
+      placeholder: "ex. Windows 10, macOS Monterey, Linux Ubuntu"
     validations:
       required: true
   - type: dropdown
@@ -52,7 +52,7 @@ body:
         - "High: Major issue, but workarounds may exist."
         - "Medium: Moderate issue, doesn’t prevent core functionality."
         - "Low: Minor issue, does not significantly impact user experience."
-      default: "Medium"
+      default: 2  # Changed to integer index for dropdown options (e.g., "Medium" is index 2)
     validations:
       required: true
   - type: textarea
@@ -77,7 +77,7 @@ body:
     attributes:
       label: Expected Behavior
       description: What did you expect to happen when you performed the steps above?
-      placeholder: e.g., "The checkout page should open as expected."
+      placeholder: "e.g., The checkout page should open as expected."
       value: "The checkout page should open and allow me to proceed with the payment."
     validations:
       required: true
@@ -108,7 +108,7 @@ body:
         - "Sometimes"
         - "Rarely"
         - "Unable to reproduce"
-      default: "Always"
+      default: 0  # Changed to integer index for dropdown options (e.g., "Always" is index 0)
     validations:
       required: true
   - type: input
@@ -116,7 +116,7 @@ body:
     attributes:
       label: Application Version
       description: What version of the webstore are you using (if known)?
-      placeholder: ex. 1.2.3
+      placeholder: "ex. 1.2.3"
     validations:
       required: false
   - type: textarea
@@ -127,12 +127,12 @@ body:
       placeholder: "Paste any relevant logs here. You can open the console by pressing F12 in most browsers."
     validations:
       required: false
-  - type: file
-    id: screenshot
+  - type: input
+    id: screenshot-url
     attributes:
-      label: Upload Screenshot or Video (Optional)
-      description: If possible, please upload a screenshot or screen recording that demonstrates the bug.
-      accept: ".jpg, .png, .mp4, .avi"
+      label: Screenshot or Video URL (Optional)
+      description: If possible, upload a screenshot or screen recording to an external service (e.g., Imgur, Google Drive) and provide the link here.
+      placeholder: "Paste the URL to your screenshot or video."
     validations:
       required: false
   - type: checkboxes
