@@ -1,5 +1,5 @@
 name: Feature Request
-about: Webstore or Backoffice Feature Request
+description: Webstore or Backoffice Feature Request
 title: "[Feature Request]: "
 labels: ["feature", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
