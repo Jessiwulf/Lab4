@@ -37,7 +37,7 @@ body:
         - "Delivered"
         - "Canceled"
         - "Returned"
-      default: "Shipped"
+      default: 1  # "Shipped" is the second item (index 1)
     validations:
       required: true
   - type: textarea
@@ -61,7 +61,7 @@ body:
         - "Late Delivery"
         - "Wrong Size"
         - "Other"
-      default: "Missing Item"
+      default: 0  # "Missing Item" is the first item (index 0)
     validations:
       required: true
   - type: textarea
@@ -70,7 +70,7 @@ body:
       label: Additional Comments
       description: If you have any other details or specific instructions, please share them here.
       placeholder: "Tell us anything else that might help us resolve the issue."
-      value: ""
+      value: ""  # Empty string value to satisfy validation
   - type: dropdown
     id: resolution-preference
     attributes:
@@ -81,7 +81,7 @@ body:
         - "Replacement"
         - "Store Credit"
         - "Other"
-      default: "Refund"
+      default: 0  # "Refund" is the first item (index 0)
     validations:
       required: true
   - type: file
