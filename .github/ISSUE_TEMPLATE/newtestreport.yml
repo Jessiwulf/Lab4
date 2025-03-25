@@ -95,7 +95,7 @@ body:
     attributes:
       label: Error Message (if any)
       description: If you received any error message or code, please provide it here.
-      placeholder: ex. "Error 404: Page not found"
+      placeholder: "ex. Error 404: Page not found"
     validations:
       required: false
   - type: dropdown
