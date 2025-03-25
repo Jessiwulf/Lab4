@@ -1,0 +1,108 @@
+name: 03-Order Issue Report
+description: Report an issue with an order placed on the webstore
+title: "[Order Issue]: "
+labels: ["order", "customer-service", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide details about the issue with your order. We are here to help you resolve it quickly!
+  - type: input
+    id: order-id
+    attributes:
+      label: Order ID
+      description: What is your order number?
+      placeholder: ex. #12345
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Your Email Address
+      description: Please provide your email address to help us contact you about this issue.
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: order-status
+    attributes:
+      label: Order Status
+      description: What is the status of your order?
+      options:
+        - "Pending"
+        - "Shipped"
+        - "Delivered"
+        - "Canceled"
+        - "Returned"
+      default: "Shipped"
+    validations:
+      required: true
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Describe the issue you're facing with your order. (e.g., incorrect item, damaged product, delayed shipment, etc.)
+      placeholder: "Provide detailed information about the problem here."
+      value: "My order was delayed and the item was damaged."
+    validations:
+      required: true
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Issue
+      description: What type of issue are you reporting?
+      options:
+        - "Missing Item"
+        - "Wrong Item"
+        - "Damaged Product"
+        - "Late Delivery"
+        - "Wrong Size"
+        - "Other"
+      default: "Missing Item"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional Comments
+      description: If you have any other details or specific instructions, please share them here.
+      placeholder: "Tell us anything else that might help us resolve the issue."
+      value: ""
+  - type: dropdown
+    id: resolution-preference
+    attributes:
+      label: Preferred Resolution
+      description: How would you like us to resolve this issue?
+      options:
+        - "Refund"
+        - "Replacement"
+        - "Store Credit"
+        - "Other"
+      default: "Refund"
+    validations:
+      required: true
+  - type: file
+    id: upload-file
+    attributes:
+      label: Upload Image/Proof
+      description: Please upload an image of the damaged or incorrect item (if applicable).
+      accept: ".jpg, .png, .jpeg"
+  - type: input
+    id: phone-number
+    attributes:
+      label: Phone Number (Optional)
+      description: If you'd prefer to be contacted via phone, please provide your phone number.
+      placeholder: ex. +123456789
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow the Code of Conduct
+          required: true
