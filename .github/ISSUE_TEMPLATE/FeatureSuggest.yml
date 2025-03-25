@@ -68,7 +68,6 @@ body:
       label: Relevant log output (if applicable)
       description: If you encountered any error messages or logs, please share them here. This will be formatted into code.
       render: shell
-      required: false
   - type: checkboxes
     id: terms
     attributes:
@@ -76,4 +75,4 @@ body:
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
       options:
         - label: I agree to follow this webstore's Code of Conduct
-      default: false # This ensures it is not pre-selected unless specified
+
