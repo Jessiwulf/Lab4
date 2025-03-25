@@ -1,4 +1,4 @@
-name: Bug Report3
+name: 01-Bug Report
 description: Report a bug or issue with the webstore
 title: "[Bug Report]: "
 labels: ["bug", "triage", "priority"]
@@ -11,13 +11,13 @@ body:
       value: |
         We appreciate your help in reporting bugs. Please provide the following details so that we can investigate and resolve the issue as quickly as possible.
   - type: input
-    id: order-id
+    id: page
     attributes:
-      label: Order ID (if applicable)
-      description: If this bug is related to a specific order, please provide the order ID.
-      placeholder: "ex. #12345"
+      label: Bugged page 
+      description: If this bug is related to a specific page, please provide info for us.
+      placeholder: "ex. Homepage"
     validations:
-      required: false
+      required: true
   - type: input
     id: email
     attributes:
@@ -29,8 +29,8 @@ body:
   - type: input
     id: browser-version
     attributes:
-      label: Browser Version
-      description: What browser and version are you using when you encounter this bug?
+      label: Browser 
+      description: What browser are you using when you encounter this bug?
       placeholder: "ex. Chrome 90.0.4430.85"
     validations:
       required: true
