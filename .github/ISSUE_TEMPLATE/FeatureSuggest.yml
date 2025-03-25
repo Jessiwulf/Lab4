@@ -1,0 +1,79 @@
+name: Feature Request
+about: Webstore or Backoffice Feature Request
+title: "[Feature Request]: "
+labels: ["feature", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please share your ideas or issues related to our clothing webstore. Your feedback is highly appreciated!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: "ex. email@example.com"
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What issue did you face or feature would you like to suggest for the webstore?
+      placeholder: "ex. I want more payment method for the checkout process!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Webstore Version
+      description: What version of the webstore are you using?
+      options:
+        - "V1.0.0 (Default)"
+        - "V0.1 (Beta)"
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Which device did you use for the issue?
+      multiple: false
+      options:
+        - Desktop
+        - Mobile
+        - Tablet
+      default: Desktop
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers did you use while accessing the webstore?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output (if applicable)
+      description: If you encountered any error messages or logs, please share them here. This will be formatted into code.
+      render: shell
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this webstore's Code of Conduct
+          required: true
