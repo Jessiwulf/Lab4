@@ -34,7 +34,7 @@ body:
       options:
         - "V1.0.0 (Default)"
         - "V0.1 (Beta)"
-      default: 0
+      default: 0 # index of the default option (0 for "V1.0.0 (Default)")
     validations:
       required: true
   - type: dropdown
@@ -46,7 +46,7 @@ body:
         - Desktop
         - Mobile
         - Tablet
-      default: Desktop
+      default: 0 # index of the default option (0 for "Desktop")
     validations:
       required: true
   - type: dropdown
@@ -76,4 +76,4 @@ body:
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
       options:
         - label: I agree to follow this webstore's Code of Conduct
-          required: true
+      default: false # This ensures it is not pre-selected unless specified
