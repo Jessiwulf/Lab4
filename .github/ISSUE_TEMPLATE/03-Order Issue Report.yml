@@ -70,7 +70,9 @@ body:
       label: Additional Comments
       description: If you have any other details or specific instructions, please share them here.
       placeholder: "Tell us anything else that might help us resolve the issue."
-      value: ""  # Empty string value to satisfy validation
+      value: "No additional comments at this time."  # Non-empty string to satisfy validation
+    validations:
+      required: false  # Allow this to be optional, so it doesn't need to be filled out
   - type: dropdown
     id: resolution-preference
     attributes:
@@ -90,6 +92,7 @@ body:
       label: Upload Image/Proof
       description: Please upload an image of the damaged or incorrect item (if applicable).
       accept: ".jpg, .png, .jpeg"
+      required: false  # Make this optional for users
   - type: input
     id: phone-number
     attributes:
